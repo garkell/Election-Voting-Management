@@ -11,10 +11,10 @@
 defined('_JEXEC') or die;
 
 /**
- * Voters list controller class.
+ * Nominationss list controller class.
  * @since  1.6
  */
-class GavotingControllerVoters extends GavotingController
+class GavotingControllerNominations extends GavotingController
 {
 	/**
 	 * Proxy for getModel.
@@ -27,9 +27,9 @@ class GavotingControllerVoters extends GavotingController
 	 *
 	 * @since	1.6
 	 */
-	public function &getModel($name = 'Voters', $prefix = 'GavotingModel', $config = array())
+	public function &getModel($name = 'Nominations', $prefix = 'GavotingModel', $config = array('ignore_request' => true))
 	{
-		$model = parent::getModel($name, $prefix, array('ignore_request' => true));
+		$model = parent::getModel($name, $prefix, $config);
 
 		return $model;
 	}
