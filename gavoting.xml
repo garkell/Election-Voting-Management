@@ -7,7 +7,7 @@
     <author>Glenn Arkell</author>
     <authorEmail>glenn@glennarkell.com.au</authorEmail>
     <authorUrl>http://www.glennarkell.com.au</authorUrl>
-    <version>4.0.01</version>
+    <version>4.0.02</version>
     <description>COM_GAVOTING_XML_DESCRIPTION</description>
     
 	<scriptfile>script.php</scriptfile>
@@ -18,9 +18,9 @@
         </sql>
     </install>
     <update> <!-- Runs on update -->
-		<schemas>
-			<schemapath type="mysql">sql/updates/mysql/</schemapath>
-		</schemas>
+	<schemas>
+		<schemapath type="mysql">sql/updates/mysql/</schemapath>
+	</schemas>
     </update>
     <uninstall> <!-- Runs on uninstall -->
         <sql>
@@ -29,7 +29,6 @@
     </uninstall>
 
     <files folder="site">
-        <filename>index.html</filename>
         <filename>gavoting.php</filename>
         <filename>controller.php</filename>
         <filename>router.php</filename>
@@ -45,23 +44,22 @@
         <folder>css</folder>
     </media>
 
-    <languages folder="site/language">
-			<language tag="en-GB">en-GB/en-GB.com_gavoting.ini</language>
+    <languages folder="site">
+		<language tag="en-GB">language/en-GB/en-GB.com_gavoting.ini</language>
     </languages>
 
     <administration>
         <menu>COM_GAVOTING</menu>
         <submenu>
-			<menu link="option=com_gavoting&amp;view=positions" view="positions" alt="Gavoting/Positions">COM_GAVOTING_TITLE_POSITIONS</menu>
-			<menu link="option=com_gavoting&amp;view=nominations" view="nominations" alt="Gavoting/Nominations">COM_GAVOTING_TITLE_NOMINATIONS</menu>
-			<menu link="option=com_gavoting&amp;view=voters" view="voters" alt="Gavoting/Voters">COM_GAVOTING_TITLE_VOTERS</menu>
-			<menu link="option=com_categories&amp;extension=com_gavoting" view="categories" img="media/com_gavoting/images/s_types.png" alt="Gavoting/Categories">COM_GAVOTING_TITLE_CATEGORIES</menu>
+		<menu link="option=com_gavoting&amp;view=positions" view="positions" alt="Gavoting/Positions">COM_GAVOTING_TITLE_POSITIONS</menu>
+		<menu link="option=com_gavoting&amp;view=nominations" view="nominations" alt="Gavoting/Nominations">COM_GAVOTING_TITLE_NOMINATIONS</menu>
+		<menu link="option=com_gavoting&amp;view=voters" view="voters" alt="Gavoting/Voters">COM_GAVOTING_TITLE_VOTERS</menu>
+		<menu link="option=com_categories&amp;extension=com_gavoting" view="categories" img="media/com_gavoting/images/s_types.png" alt="Gavoting/Categories">COM_GAVOTING_TITLE_CATEGORIES</menu>
         </submenu>
         <files folder="administrator">
             <filename>access.xml</filename>
             <filename>config.xml</filename>
             <filename>controller.php</filename>
-            <filename>index.html</filename>
             <filename>gavoting.php</filename>
             <folder>controllers</folder>
             <folder>helpers</folder>
@@ -70,9 +68,9 @@
             <folder>tables</folder>
             <folder>views</folder>
         </files>
-        <languages folder="administrator/language">
-			<language tag="en-GB">en-GB/en-GB.com_gavoting.ini</language>
-			<language tag="en-GB">en-GB/en-GB.com_gavoting.sys.ini</language>
+        <languages folder="administrator">
+			<language tag="en-GB">language/en-GB/en-GB.com_gavoting.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_gavoting.sys.ini</language>
         </languages>
     </administration>
     <config>
